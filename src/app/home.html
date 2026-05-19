@@ -1,0 +1,14 @@
+<section class="home">
+  <h2>Home</h2>
+  <p>{{ message }}</p>
+  @for (item of items; track $index) {
+    @if (item == null) {
+      <p>Item is null.</p>
+    }
+    @if (item % 2 === 0) {
+      <p>{{ item }} is even.</p>
+    } @else {
+      <p>{{ item }} is odd.</p>
+    }
+  }
+</section>

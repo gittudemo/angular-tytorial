@@ -1,2 +1,12 @@
-<h1>Mobit</h1>
-{{ name }}
+<header>
+  <h1>Mobit</h1>
+  <nav>
+    <a routerLink="/home">Home</a>
+  </nav>
+</header>
+
+<main>
+  <p>{{ name }}</p>
+  <p>{{ isAdmin ? 'Yes' : 'No' }}</p>
+  <router-outlet></router-outlet>
+</main>
