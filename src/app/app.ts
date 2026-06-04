@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { Child } from './child/child';
+import { CounterService } from './core/store/counter';
 
 @Component({
   selector: 'app-root',
@@ -36,5 +37,10 @@ export class App {
 
 
   userName : string = "Angular";  //strp1 : create a variable in parent component and assign some value to it.
+
+
+  constructor(public counterStore : CounterService) {   
+
+  }
 
 }
