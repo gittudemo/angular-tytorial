@@ -21,5 +21,10 @@
   <app-child #childRef></app-child>
   <p>message from child : {{ childRef.message() }}</p>
 
+
+  <button (click)="counterStore.increment()">Increment</button>
+  <button (click)="counterStore.decrement()">Decrement</button>
+  <button (click)="counterStore.reset()">Reset</button>
+
   <router-outlet></router-outlet>
 </main>
