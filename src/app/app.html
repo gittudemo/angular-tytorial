@@ -57,5 +57,14 @@
 
   <app-button [label]="'Save'" (clicked)="saveData()"></app-button>
 
+  <!-- 
+  working on Router concepts -->
+
+  <nav>
+    <a routerLink="/home">Home</a><br />
+    <a routerLink="/about">About</a><br />
+    <a routerLink="/contact">Contact</a>
+  </nav>
+
   <router-outlet></router-outlet>
 </main>
