@@ -13,5 +13,13 @@
   <button (click)="decreament()">minus</button>
   <button (click)="reset()">reset</button>
   <p>Count: {{ count() }}</p> -->
+  <h2>parent Component</h2>
+
+  <app-child [childUserName]="userName"></app-child>
+  <!-- passing the userName signal to the child component using property binding -->
+
+  <app-child #childRef></app-child>
+  <p>message from child : {{ childRef.message() }}</p>
+
   <router-outlet></router-outlet>
 </main>

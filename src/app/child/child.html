@@ -1,1 +1,7 @@
-<p>child works!</p>
+<p>child component</p>
+
+<p>child component user name: {{ childUserName() }}</p>
+<!-- step4 : use the variable in child component to display the data received from parent component. we have to call the variable as a function because it is a signal. -->
+
+<button (click)="updateMessage()">Update Message</button>
+<!-- step3 : create a button in child component and bind a click event to it that will call a function to update the signal variable. -->
