@@ -43,5 +43,19 @@
 
   <p>signal value: {{ userSignal().userName | json }}, {{ userSignal().email | json }}</p>
 
+  <!-- reuable card component demo -->
+
+  <app-card [title]="'Angular Title'" [description]="'Learning Angular reuasble card Demo'">
+    <h3>This is extra data from card component</h3>
+    <button>This is Button from card component</button>
+  </app-card>
+  <!-- passing title and description as input properties to the card component -->
+
+  <!-- 
+  create reuasbe button component demo -->
+  <!-- step5 : use the button component in the template of app component and pass the label as input property and bind the click event to a function in app component to handle the button click event. -->
+
+  <app-button [label]="'Save'" (clicked)="saveData()"></app-button>
+
   <router-outlet></router-outlet>
 </main>

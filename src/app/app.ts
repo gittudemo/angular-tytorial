@@ -4,10 +4,12 @@ import { Child } from './child/child';
 import { CounterService } from './core/store/counter';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Card } from './card/card';
+import { Button } from './button/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, Child, ReactiveFormsModule, CommonModule], //importing the child component
+  imports: [RouterOutlet, RouterLink, Child, ReactiveFormsModule, CommonModule, Card, Button], //importing the child component
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -64,5 +66,10 @@ export class App {
   sublitForm() {
     console.log(this.myForm.value); //step8 : create a function to submit the form and log the form values to the console.
     console.log(`User Name: ${this.myForm.value.userName}, Email: ${this.myForm.value.email}`); //step9 : log the form values in a formatted way to the console.
+  }
+
+  saveData() {
+    // call saveData to fetch data from server and log the message to console when data is fetched successfully.
+    console.log('Data fetched');
   }
 }
