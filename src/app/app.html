@@ -20,11 +20,28 @@
 
   <app-child #childRef></app-child>
   <p>message from child : {{ childRef.message() }}</p>
+  <!-- 
+
+
 
   <button (click)="counterStore.increment()">Increment</button>
   <button (click)="counterStore.decrement()">Decrement</button>
   <button (click)="counterStore.reset()">Reset</button>
 
-  <p>Count from store: {{ counterStore.count() }}</p>
+  <p>Count from store: {{ counterStore.count() }}</p> -->
+  <h2>signal -reactive-form</h2>
+
+  <form [formGroup]="myForm">
+    <label for="userName">User Name:</label>
+    <input id="userName" formControlName="userName" type="text" />
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" />
+
+    <button (click)="sublitForm()">Submit</button>
+  </form>
+
+  <p>signal value: {{ userSignal().userName | json }}, {{ userSignal().email | json }}</p>
+
   <router-outlet></router-outlet>
 </main>
