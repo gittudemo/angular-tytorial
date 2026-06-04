@@ -12,5 +12,21 @@ export class App {
   name = 'Angular';
   isAdmin = true;
 
+
   item = [10,20,15,35,67];
+  newItems = [10,1,21,5,8];
+  count = signal(10);
+
+  increament() {
+    this.count.update((c) => c + 1);
+  }
+
+  decreament() {
+    this.count.update((c) => c - 1);
+  } 
+
+  reset() {
+    this.count.set(0);
+  }
+
 }
