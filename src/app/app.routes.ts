@@ -18,7 +18,11 @@ export const routes: Routes = [
 
     children: [
       { path: 'profile', component: Profilr },
-      { path: 'setting', component: Setting },
+      // { path: 'setting', component: Setting },
+      {
+        path: 'setting',
+        loadComponent: () => import('./dashboard/setting/setting').then((m) => m.Setting),
+      },
     ],
   },
 ];
