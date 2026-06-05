@@ -7,9 +7,20 @@ import { CommonModule } from '@angular/common';
 import { Card } from './card/card';
 import { Button } from './button/button';
 
+import { Header } from './header/header';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, Child, ReactiveFormsModule, CommonModule, Card, Button], //importing the child component
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    Child,
+    ReactiveFormsModule,
+    CommonModule,
+    Card,
+    Button,
+    Header,
+  ], //importing the child component
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

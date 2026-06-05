@@ -12,6 +12,9 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: Aboutcomp },
   { path: 'contact', component: Contactcomp },
+  { path: 'vision', loadComponent: () => import('./vision/vision').then((m) => m.Vision) },
+  { path: 'watch', loadComponent: () => import('./watch/watch').then((m) => m.Watch) },
+  { path: 'support', loadComponent: () => import('./support/support').then((m) => m.Support) },
   {
     path: 'dashboard',
     component: Dashboard,

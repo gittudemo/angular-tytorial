@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #8f6262;
+
+  padding: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a.active {
+  border-bottom: 2px solid rgb(4, 182, 117);
+}
