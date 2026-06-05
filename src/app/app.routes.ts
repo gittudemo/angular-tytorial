@@ -6,6 +6,7 @@ import { Contactcomp } from './contactcomp/contactcomp';
 import { Dashboard } from './dashboard/dashboard';
 import { Profilr } from './dashboard/profilr/profilr';
 import { Setting } from './dashboard/setting/setting';
+import { PageNotFound } from './page-not-found/page-not-found';
 
 export const routes: Routes = [
   { path: '', component: Homecomp },
@@ -28,4 +29,5 @@ export const routes: Routes = [
       },
     ],
   },
+  { path: '**', component: PageNotFound },
 ];
